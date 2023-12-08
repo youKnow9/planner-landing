@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Redcollar";
+  src: url("/planner-rc/shared/fonts/Redcollar.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "TT Commons Medium";
+  src: url("/planner-rc/shared/fonts/TTCommons-Medium.woff") format("woff");
+}
+
+* {
+  font-family: "Redcollar";
+}

@@ -1,0 +1,39 @@
+:root {
+	--red-color: #f51b1b;
+	--gray-color: #e4e4e4bd;
+}
+
+.wrapper-form {
+	display: flex;
+	max-width: 900px;
+	margin: 0 auto;
+	flex-direction: column;
+	align-items: center;
+}
+
+input {
+	width: 100%;
+	padding: 8px;
+	margin-top: 4px;
+	margin-bottom: 8px;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 1px solid black;
+}
+
+button {
+	padding: 10px 15px;
+	background-color: var(--red-color);
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: var(--gray-color);
+}
+
+.error {
+	color: var(--red-color);
+	margin-top: 4px;
+}

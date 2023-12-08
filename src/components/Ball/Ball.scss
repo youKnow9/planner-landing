@@ -1,0 +1,49 @@
+// body {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   position: absolute;
+// //   width: 100%;
+// //   height: 100vh;
+// }
+
+:root {
+  --cube-size: 300px;
+  --side-size: calc(var(--cube-size) / 2);
+  --perspective: calc(var(--cube-size) * 4);
+  --red-color: #f51b1bcb;
+  --gray-color: #e4e4e4bd;
+}
+
+.animation-wrapper {
+	overflow: hidden;
+}
+
+.sphere-animation {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 780px;
+  height: 480px;
+  opacity: 0.9;
+  //   margin: -290px 0 0 -290px;
+  //   color: rgb(22, 3, 3);
+}
+
+.sphere path {
+  fill: url(#sphereGradientNew);
+  stroke-width: 3px;
+  stroke: var(--red-color);
+  backface-visibility: hidden;
+}
+
+@media (min-width: 500px) {
+  .sphere path {
+    stroke-width: 0.4px;
+  }
+}
+@keyframes pathAnimation {
+	to {
+	  padding: 100px;
+	}
+ }

@@ -1,0 +1,43 @@
+:root {
+	--red-color: #f51b1bcb;
+	--gray-color: #e4e4e4bd; 
+}
+
+.main-header {
+	position: fixed;
+	background-color: rgb(255, 255, 255);
+	width: 100%;
+	top: 0;
+	z-index: 99;
+	padding: 8px 0;
+	box-shadow: 0px 6px 25px -12px rgba(0, 0, 0, 0.24);
+}
+
+.wrapper-header {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.nav-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cube-img {
+	width: 50px;
+	height: 50px;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.icons {
+	width: 30px;
+	margin-right: 10px;
+}
