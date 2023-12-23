@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import "./BusinessPage.scss";
+import axios from "axios";
+
 
 export default function BusinessPage() {
 
@@ -24,20 +26,31 @@ export default function BusinessPage() {
 		const isNameValid = validateName(name);
 
 		if (!isPhoneNumberValid) {
-			setPhoneNumberError('Please enter a valid Russian phone number (+7 and 10 digits).');
+			setPhoneNumberError('Пожалуйста, введите номер в формате (+7).');
 		} else {
 			setPhoneNumberError('');
 		}
 
 		if (!isNameValid) {
-			setNameError('Please enter your name.');
+			setNameError('Пожалуйста, введите ваше имя');
 		} else {
 			setNameError('');
 		}
 
 		if (isPhoneNumberValid && isNameValid) {
-			console.log('Form submitted:', { phoneNumber, name });
+			console.log({ phoneNumber, name });
+			const url = "http://localhost/leads.php";
+
+			let fData = new FormData();
+			fData.append("number", phoneNumber);
+			fData.append("name", name);
+
+			axios.post(url, fData)
+			.then(response => console.log(response,'форма отправлена типа'))
+			.catch(error => console.log(error))
 		}
+
+		
 	};
 
 	return (
@@ -66,7 +79,7 @@ export default function BusinessPage() {
 						{nameError && <p className="error">{nameError}</p>}
 					</div>
 					<div>
-						<button type="submit">Submit</button>
+						<button type="submit" onClick={handleSubmit}>Получить предложение</button>
 					</div>
 				</form>
 			</div>

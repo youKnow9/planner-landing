@@ -1,39 +1,85 @@
 :root {
 	--red-color: #f51b1b;
 	--gray-color: #e4e4e4bd;
-}
-
-.wrapper-form {
-	display: flex;
-	max-width: 900px;
+  }
+  
+  #businessPage {
+	max-width: 1600px;
 	margin: 0 auto;
-	flex-direction: column;
+	display: flex;
+	justify-content: center;
 	align-items: center;
-}
-
-input {
+	padding: 130px 20px 130px 20px;
+  
+	@media screen and (max-width: 750px) {
+	  max-width: 100%;
+	  padding: 20px;
+	}
+  
+	@media screen and (max-width: 450px) {
+	  padding: 20px; // Дополнительные стили при разрешении менее 450px
+	}
+  }
+  
+  .wrapper-form {
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+  }
+  
+  label {
+	line-height: 1.6;
+	font-size: 25px;
+  
+	@media screen and (max-width: 450px) {
+	  font-size: 20px; // Пример размера шрифта для мобильных устройств с разрешением менее 450px
+	}
+  }
+  
+  input {
 	width: 100%;
 	padding: 8px;
 	margin-top: 4px;
 	margin-bottom: 8px;
 	box-sizing: border-box;
 	border: none;
+	font-size: 20px;
 	border-bottom: 1px solid black;
-}
-
-button {
-	padding: 10px 15px;
-	background-color: var(--red-color);
+  }
+  
+  button {
+	padding: 20px 15px;
+	background-color: black;
 	color: #fff;
 	border: none;
 	cursor: pointer;
-}
-
-button:hover {
-	background-color: var(--gray-color);
-}
-
-.error {
+	font-size: 25px;
+	border-radius: 10px;
+	width: 100%;
+	margin-top: 20px;
+  }
+  
+  button:hover {
+	background-color: var(--red-color);
+  }
+  
+  .error {
 	color: var(--red-color);
 	margin-top: 4px;
-}
+  }
+  
+  h1 {
+	font-size: 60px;
+  
+	@media screen and (max-width: 750px) {
+	  font-size: 40px;
+	}
+  
+	@media screen and (max-width: 450px) {
+	  font-size: 30px; 
+	}
+
+	@media screen and (max-width: 450px) {
+		font-size: 25px;
+	  }
+  }
